@@ -1,15 +1,17 @@
 //Requiring the user model | Importanto o model user
 const User = require("../models/userModel");
 const { Op } = require("sequelize");
+const City = require("../models/cityModel");
 
 //Exporting the middlewares
 module.exports = {
-  //Get Users: Find all the users in db | Busca por todos os usuários no banco
+  //Get Users: Find all the users in db by their userName | Busca por todos os usuários no banco pelos seus nomes
   async getUserByName(req, res, next) {
     try {
       const userName = req.params.userName;
       const users = await User.findAll({
         where: { fullname: { [Op.like]: `%${userName}%` } },
+        include: City,
       });
       //If there is not any user, then will be throwed an error | Se não houver um usuário, será enviado um erro.
       if (!users) {
@@ -34,7 +36,7 @@ module.exports = {
   async getUserById(req, res, next) {
     try {
       const userId = req.params.userId;
-      const user = await User.findByPk(userId);
+      const user = await User.findByPk(userId, { include: City });
       if (!user) {
         const err = {
           statusCode: 404,
@@ -57,7 +59,7 @@ module.exports = {
   //Create User: Create an user in db | Criação do usuário no banco
   async postCreateUser(req, res, next) {
     try {
-      const { fullName, birthday, gender, city } = req.body;
+      const { fullName, birthday, gender, cityId } = req.body;
       //Getting the difference (in miliseconds) between now and the user's birthday
       const dateDifferenceMS = Date.now() - new Date(birthday);
 
@@ -70,7 +72,7 @@ module.exports = {
         fullName: fullName,
         birthday: birthday,
         gender: gender,
-        city: city,
+        CityId: cityId,
         age: age,
       });
       res
@@ -101,7 +103,7 @@ module.exports = {
       }
 
       //If the input is undefined, then the data will be the old one || Caso este input não possua valor, então será utilizado o dado antigo
-      user.fullName = fullName
+      user.fullName = fullName;
 
       //Saving the update
       const result = await user.save();
@@ -109,6 +111,22 @@ module.exports = {
       res.status(200).json({
         message: `User ${fullName} uppdated succesfully.`,
         data: result,
+      });
+    } catch (err) {
+      //If an error exists then will be send to error middleware, the error and its status | Se ocorrer algum então será enviado o erro para o middleware de erros
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
+    }
+  },
+
+  async deleteUser(req, res, next) {
+    try {
+      const userId = req.params.userId;
+      await User.destroy({ where: { id: userId } });
+      res.status(200).json({
+        message: `User deleted succesfully.`,
       });
     } catch (err) {
       //If an error exists then will be send to error middleware, the error and its status | Se ocorrer algum então será enviado o erro para o middleware de erros

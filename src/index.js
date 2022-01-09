@@ -4,10 +4,10 @@ const sequelize = require("./config/database");
 // Importing userRoutes / Importanto rotas dos usuários
 const userRoutes = require("./routes/userRoutes");
 // Importing cityRoutes / Importanto rotas das cidades
-const cityRouter = require('./routes/cityRoutes')
+const cityRouter = require("./routes/cityRoutes");
 
-const User = require('./models/userModel')
-const City = require('./models/cityModel')
+const User = require("./models/userModel");
+const City = require("./models/cityModel");
 
 const app = express();
 
@@ -34,7 +34,7 @@ app.use((req, res, next) => {
 //Using the user middleware user | Usando o middleware users
 app.use("/users", userRoutes);
 //Using the city middleware user | Usando o middleware city
-app.use('/cities', cityRouter)
+app.use("/cities", cityRouter);
 
 //Creating an error middleware | Criando um middleware para erros
 app.use((error, req, res, next) => {
@@ -44,14 +44,13 @@ app.use((error, req, res, next) => {
   res.status(status).json({ message: message, data: data });
 });
 
-//Association one-to-one, One user has one city | Associação de um para um, um usuário possui uma cidade
-User.hasOne(City)
-
+//Association one-to-one, One user belongs to one city | Associação de um para um, um usuário pertence a uma cidade
+User.belongsTo(City);
 
 //Connecting to the database | Conexação com o banco de dados
 sequelize
   .sync()
-//   .sync({ force: true })
+  //   .sync({ force: true })
   .then(() => {
     console.log("Database connected successfully!");
 

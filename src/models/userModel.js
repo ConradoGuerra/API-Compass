@@ -24,10 +24,6 @@ User.init(
       type: DataTypes.DATEONLY,
       allowNull: false,
     },
-    city: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     age: {
       type: DataTypes.INTEGER,
       allowNull: false,

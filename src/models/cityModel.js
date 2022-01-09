@@ -12,7 +12,11 @@ City.init(
       primaryKey: true,
       allowNul: false,
     },
-    name: {
+    cityName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    stateName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
