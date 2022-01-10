@@ -26,7 +26,7 @@ describe("User Controller", () => {
       const errorMessage = errorTextParsed.message;
 
       expect(errorStatus).toBe(422);
-      expect(errorMessage).toBe("Please, insert a valid data.");
+      expect(errorMessage).toBe("Invalid gender.");
     });
 
     it("should not create an user if the cityId does not exist", async () => {
@@ -123,7 +123,7 @@ describe("User Controller", () => {
       const parsedData = JSON.parse(response.text);
 
       expect(status).toBe(422);
-      expect(parsedData.message).toBe("Please, insert a valid data.");
+      expect(parsedData.message).toBe('Invalid user id.');
     });
   });
 

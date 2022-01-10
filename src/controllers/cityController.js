@@ -85,7 +85,6 @@ module.exports = {
       // Verify if exists validation error
       const { errors } = validationResult(req);
       validationErrorVerify(errors)
-
       const { cityName, stateName } = req.body;
 
       const createdCity = await City.create({

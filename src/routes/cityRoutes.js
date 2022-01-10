@@ -9,21 +9,40 @@ const { check } = require("express-validator");
 //End point to search the city by it's name => GET => /cities/getCityByName/:cityName
 router.get(
   "/getCityByName/:cityName",
-  [check("cityName").trim()],
+  [
+    check("cityName", "Invalid city name.")
+      .trim()
+      .isAlpha("pt-BR", { ignore: " " })
+      .notEmpty(),
+  ],
   cityController.getCities
 );
 
 //End point to search the state by it's name => GET => /cities/getStateByName/:stateName
 router.get(
   "/getStateByName/:stateName",
-  [check("stateName").trim()],
+  [
+    check("stateName", "Invalid state name.")
+      .trim()
+      .isAlpha("pt-BR", { ignore: " " })
+      .notEmpty(),
+  ],
   cityController.getStates
 );
 
 //End point to create a city => POST => /cities/createCity
 router.post(
   "/createCity",
-  [check("cityName").trim().notEmpty(), check("stateName").trim().notEmpty()],
+  [
+    check("cityName", "Invalid city name.")
+      .trim()
+      .isAlpha("pt-BR", { ignore: " " })
+      .notEmpty(),
+    check("stateName", "Invalid state name.")
+      .trim()
+      .isAlpha("pt-BR", { ignore: " " })
+      .notEmpty(),
+  ],
   cityController.createCity
 );
 

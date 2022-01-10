@@ -36,7 +36,7 @@ describe("City Controller", () => {
 
       expect(errorStatus).toBe(422);
       expect(response).toBeDefined();
-      expect(errorMessage).toBe("Please, insert a valid data.");
+      expect(errorMessage).toBe("Invalid state name.");
     });
 
     it("should not create when already exists the exactly city and state", async () => {
