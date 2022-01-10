@@ -23,8 +23,15 @@ City.init(
   },
   {
     sequelize,
-    modelName: "City",
+    modelName: "city",
     timestamps: true,
+    indexes: [
+        {
+          // Fields cityName AND stateName should be unique
+            unique: true,
+            fields: ['cityName', 'stateName']
+        },
+    ]
   }
 );
 
