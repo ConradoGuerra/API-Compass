@@ -18,7 +18,7 @@
     "supertest": "^6.1.6"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "yarn install --check-files && node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "SET NODE_ENV=test& jest --runInBand"
    
