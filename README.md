@@ -16,14 +16,14 @@ Sobre
 Projeto desenvolvido com o intuito de realizar a prova técnica requerida, o qual será submetido à avaliação técnica.
 
 Essa API possui 5 end-poins:
-- Criação do usuário - <u>'/users/createUser'</u>
-- Atualização do usuário - <u>'/users/updateUser/:userId'</u>
-- Exclusão do usuário - <u>'/users/deleteUser/:userId'</u>
-- Busca do usuário pelo nome - <u>'/users/getByUserName/:userName'</u>
-- Busca do usuário pelo id - <u>'/users/getByUserId/:userId'</u>
-- Criação da cidade - <u>'/cities/createCity'</u>
-- Busca da cidade pelo nome - <u>'/cities/getCityByName/:cityName'</u>
-- Busca da cidade pelo estado - <u>'/cities/getStateByName/:stateName'</u>
+- Criação do usuário - *'/users/createUser'*
+- Atualização do usuário - *'/users/updateUser/:userId'*
+- Exclusão do usuário - *'/users/deleteUser/:userId'*
+- Busca do usuário pelo nome - *'/users/getByUserName/:userName'*
+- Busca do usuário pelo id - *'/users/getByUserId/:userId'*
+- Criação da cidade - *'/cities/createCity'*
+- Busca da cidade pelo nome - *'/cities/getCityByName/:cityName'*
+- Busca da cidade pelo estado - *'/cities/getStateByName/:stateName'*
 
 Instalação
 ==========
@@ -65,7 +65,7 @@ Ao criar a cidade e o usuários será possibilitado ao usuário:
 - Buscar usuário pelo nome
 - Buscar usuário pelo id
 
-<strong> É importante destacar que para criar um usuário você necessita que ao menos uma cidade esteja criada, para que a cidade escolhida pelo usuário vincule à tabela de cidades. </strong> 
+### Obs: É importante destacar que para criar um usuário você necessita que ao menos uma cidade esteja criada, para que a cidade escolhida pelo usuário vincule à tabela de cidades.
 
 Testes
 ===========
