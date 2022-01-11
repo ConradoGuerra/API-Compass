@@ -5,7 +5,8 @@
 - [Sobre](#Sobre)
 - [Instalação](#Instalação)
    * [Como usar](#como-usar)
-   * [Tests](#testes)
+   * [Testes](#testes)
+   * [Desenvolvimento](#desenvolvimento)
    * [Tecnologias](#tecnologias)
 
 
@@ -27,16 +28,16 @@ Essa API possui 5 end-poins:
 Instalação
 ==========
 
-Clone este repositório
+### Clone este repositório:
 - $ git clone <https://github.com/ConradoGuerra/Compass.git>
 
-Você deve possuir instalado o node.js:
-https://nodejs.org/en/
+### Você deve possuir instalado o node.js:
+- https://nodejs.org/en/
 
-Após a instalação do node.js você deverá instalar o pacote Yarn:
+#### Após a instalação do node.js você deverá instalar o pacote Yarn:
 - $ npm i -global yarn
 
-Por fim, você pode rodar a aplicação para que sejam instaladas as dependências:
+##### Por fim, você pode rodar a aplicação para que sejam instaladas as dependências:
 - $ yarn start
 
 Como usar
@@ -66,6 +67,17 @@ Ao criar a cidade e o usuários será possibilitado ao usuário:
 
 <strong> É importante destacar que para criar um usuário você necessita que ao menos uma cidade esteja criada, para que a cidade escolhida pelo usuário vincule à tabela de cidades. </strong> 
 
+Testes
+===========
+
+Para testar:
+- $ yarn test
+
+Desenvolvimento
+===========
+
+Para ambiente de desenvolvimento:
+- $ yarn dev
 
 Tecnologias
 ===========
