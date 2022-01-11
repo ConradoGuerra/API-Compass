@@ -16,29 +16,29 @@ Sobre
 Projeto desenvolvido com o intuito de realizar a prova técnica requerida, o qual será submetido à avaliação técnica.
 
 Essa API possui 5 end-poins:
-- Criação do usuário - '/users/createUser'
-- Atualização do usuário - '/users/updateUser/:userId'
-- Exclusão do usuário - '/users/deleteUser/:userId'
-- Busca do usuário pelo nome - '/users/getByUserName/:userName'
-- Busca do usuário pelo id - '/users/getByUserId/:userId'
-- Criação da cidade - '/cities/createCity'
-- Busca da cidade pelo nome - '/cities/getCityByName/:cityName'
-- Busca da cidade pelo estado - '/cities/getStateByName/:stateName'
+- Criação do usuário - <u>'/users/createUser'</u>
+- Atualização do usuário - <u>'/users/updateUser/:userId'</u>
+- Exclusão do usuário - <u>'/users/deleteUser/:userId'</u>
+- Busca do usuário pelo nome - <u>'/users/getByUserName/:userName'</u>
+- Busca do usuário pelo id - <u>'/users/getByUserId/:userId'</u>
+- Criação da cidade - <u>'/cities/createCity'</u>
+- Busca da cidade pelo nome - <u>'/cities/getCityByName/:cityName'</u>
+- Busca da cidade pelo estado - <u>'/cities/getStateByName/:stateName'</u>
 
 Instalação
 ==========
 
-### Clone este repositório:
-- $ git clone <https://github.com/ConradoGuerra/Compass.git>
+#### Clone este repositório:
+ $ git clone <https://github.com/ConradoGuerra/Compass.git>
 
-### Você deve possuir instalado o node.js:
-- https://nodejs.org/en/
+#### Você deve possuir instalado o node.js:
+ https://nodejs.org/en/
 
 #### Após a instalação do node.js você deverá instalar o pacote Yarn:
-- $ npm i -global yarn
+ $ npm i -global yarn
 
-##### Por fim, você pode rodar a aplicação para que sejam instaladas as dependências:
-- $ yarn start
+#### Por fim, você pode rodar a aplicação para que sejam instaladas as dependências:
+ $ yarn start
 
 Como usar
 =========
