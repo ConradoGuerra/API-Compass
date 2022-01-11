@@ -16,14 +16,14 @@ Sobre
 Projeto desenvolvido com o intuito de realizar a prova técnica requerida, o qual será submetido à avaliação técnica.
 
 Essa API possui 5 end-poins:
-- Criação do usuário - *'/users/createUser'*
-- Atualização do usuário - *'/users/updateUser/:userId'*
-- Exclusão do usuário - *'/users/deleteUser/:userId'*
-- Busca do usuário pelo nome - *'/users/getByUserName/:userName'*
-- Busca do usuário pelo id - *'/users/getByUserId/:userId'*
-- Criação da cidade - *'/cities/createCity'*
-- Busca da cidade pelo nome - *'/cities/getCityByName/:cityName'*
-- Busca da cidade pelo estado - *'/cities/getStateByName/:stateName'*
+- Criação do usuário - */users/createUser*
+- Atualização do usuário - */users/updateUser/:userId*
+- Exclusão do usuário - */users/deleteUser/:userId*
+- Busca do usuário pelo nome - */users/getByUserName/:userName*
+- Busca do usuário pelo id - */users/getByUserId/:userId*
+- Criação da cidade - */cities/createCity*
+- Busca da cidade pelo nome - */cities/getCityByName/:cityName*
+- Busca da cidade pelo estado - */cities/getStateByName/:stateName*
 
 Instalação
 ==========
