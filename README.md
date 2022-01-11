@@ -37,7 +37,7 @@ Instalação
 #### Após a instalação do node.js você deverá instalar o pacote Yarn:
  $ npm i -global yarn
 
-#### Por fim, você pode rodar a aplicação para que sejam instaladas as dependências:
+#### Por fim, você executa a aplicação para que sejam instaladas as dependências com o comando:
  $ yarn start
 
 Como usar
