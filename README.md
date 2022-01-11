@@ -15,7 +15,7 @@ Sobre
 
 Projeto desenvolvido com o intuito de realizar a prova técnica requerida, o qual será submetido à avaliação técnica.
 
-Essa API possui 5 end-poins:
+Esta API possui oito end-poins:
 - Criação do usuário - */users/createUser*
 - Atualização do usuário - */users/updateUser/:userId*
 - Exclusão do usuário - */users/deleteUser/:userId*
@@ -43,23 +43,21 @@ Instalação
 Como usar
 =========
 
-No projeto serão criadas duas tabelas, uma para cidades e outra de usuários.
+No projeto serão criadas duas tabelas, uma para cidades (cities) e outra para usuários (users).
 
-Na tabela cidade (cities) os dados requeridos são:
+Na tabela cidades (cities) os dados requeridos para a criação são:
 - Cidade
 - Estado
 
-Na tabela usuário (users) os dados requeridos são:
+Na tabela usuários (users) os dados requeridos para a criação são:
 - Nome completo
-- Gênero
 - Data de nascimento
+- Gênero
 - Cidade
 
-Ao criar a cidade e o usuários será possibilitado ao usuário:
-- Criar cidade 
+Ao criar a cidade e o usuários será possibilitado:
 - Buscar pela cidade 
 - Buscar pelo estado 
-- Criar usuário
 - Atualizar o usuário
 - Remover usuário
 - Buscar usuário pelo nome
@@ -68,13 +66,13 @@ Ao criar a cidade e o usuários será possibilitado ao usuário:
 ### Obs: É importante destacar que para criar um usuário você necessita que ao menos uma cidade esteja criada, para que a cidade escolhida pelo usuário vincule à tabela de cidades.
 
 Testes
-===========
+======
 
 Para testar:
 - $ yarn test
 
 Desenvolvimento
-===========
+===============
 
 Para ambiente de desenvolvimento:
 - $ yarn dev
