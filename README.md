@@ -63,7 +63,7 @@ Ao criar a cidade e o usuários será possibilitado:
 - Buscar usuário pelo nome
 - Buscar usuário pelo id
 
-### Obs: É importante destacar que para criar um usuário você necessita que ao menos uma cidade esteja criada, para que a cidade escolhida pelo usuário vincule à tabela de cidades.
+### Obs: É importante destacar que, para criar um usuário, você necessita que ao menos uma cidade esteja criada, para então a cidade escolhida pelo usuário vincule à tabela de cidades. Ou seja, crie primeiro uma cidade e depois crie o usuário.
 
 Testes
 ======
